@@ -1,0 +1,49 @@
+ !DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+</head>
+<body>
+    let num1 =parseFloat(await ask("Enter the first number:"));
+    let num2 =parseFloat(await ask("Enter the second number"));
+    let operation = await ask("Choose an operation : +,- ,*,/");
+    
+    function add( a,b){
+        return a+b;
+    }
+    function subtract(a,b){
+        return a-b;
+    }
+    function multiply(a,b){
+        return a*b;
+    }
+    function divide (a,b){
+        if(b===0) {
+     return "Error: cannot divide by zero" ;
+    } return a/b;
+}
+let result ;
+switch(operation){
+    case "+":
+    result = add(num1,num2);
+    break;
+    case "-":
+    result = subtract(num1,num2);
+    break;
+    case"*":
+    result= multiply(num1, num2);
+    break;
+    case"/":
+    result = divide ( num1, num2);
+    break;
+    default:
+    result = "invalid operation selected";
+}
+console.log( "Result :" +result);
+rl.close();
+calculator();
+
+</body>
+</html>
