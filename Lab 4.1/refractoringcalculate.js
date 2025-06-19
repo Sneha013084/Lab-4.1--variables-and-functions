@@ -8,5 +8,7 @@ function calculateTotalCost (price, quantity, taxRate, discount = 0){
     const adjustedSubtotal =  subtotal< 0 ? 0 : subtotal;
 
     const totalCost = adjustedSubtotal *(1+taxRate);
+
     return taxRate.toFixed(2);
 }
+   
