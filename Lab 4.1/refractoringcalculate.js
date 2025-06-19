@@ -11,4 +11,9 @@ function calculateTotalCost (price, quantity, taxRate, discount = 0){
 
     return taxRate.toFixed(2);
 }
-   
+
+console.log(calculateTotalCost(10, 3, 0.07));           
+console.log(calculateTotalCost(20, 8, 0.25, 2));        
+console.log(calculateTotalCost(16, 5, 0.02, 10));      
+console.log(calculateTotalCost("10", 6, 0.50, 2));      
+console.log(calculateTotalCost(10, 3, 0.07, "five")); 
