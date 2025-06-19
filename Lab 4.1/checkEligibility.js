@@ -1,6 +1,6 @@
 function checkEligibility (age, isEmployed) {
 
-    if (age != "number" || isEmployed != "boolean"){
+    if (typeof age != "number" || typeof isEmployed != "boolean"){
 
         return "Invalid input";
     }
@@ -13,4 +13,7 @@ function checkEligibility (age, isEmployed) {
         return "Not eligible"
      }
  }
-   console.log(checkEligibility( 25,isEmployed));
+   console.log(checkEligibility( 25, true));
+   console.log(checkEligibility( 50, false));
+   console.log(checkEligibility( 18, true));
+   console.log(checkEligibility( 16, false));
