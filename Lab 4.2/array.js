@@ -26,9 +26,7 @@ function displayList(){
   addItem ("Bread");
 
   displayList();
-
   removeItem();
-
   displayList ();
 
   removeItem();
